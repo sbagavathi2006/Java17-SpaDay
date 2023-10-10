@@ -12,7 +12,7 @@ public class User {
     @Email(message="Must be a valid Email ID")
     private String email;
     @NotBlank(message="Password cannot be empty")
-    @Size(max = 6, message = "The password is at least 6 characters long")
+    @Size(min = 6, message = "The password is at least 6 characters long")
     private String password;
     @NotNull(message="Password do not match")
     private String verifyPassword;
